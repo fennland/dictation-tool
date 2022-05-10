@@ -1,21 +1,11 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\fennland\OneDrive - stu.hqu.edu.cn\Programme\Python\Projects\proj14-random-dictation\randomDictation.ui'
+# Form implementation generated from reading ui file 'c:\Users\fennland\OneDrive - stu.hqu.edu.cn\Programme\Python\Projects\proj14-random-dictation\ui\randomDictation.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
-# -*- encoding: utf-8 -*-
-'''
-@File    :   Ui_randomDictation.py
-@Time    :   2022/05/10 22:14:07
-@Author  :   Fenn 
-@Version :   
-@Contact :   realHifenn@outlook.com
-'''
-
-# here put the import lib
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -37,7 +27,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit.setMinimumSize(QtCore.QSize(0, 100))
         font = QtGui.QFont()
         font.setFamily("微软雅黑")
-        font.setPointSize(10)
+        font.setPointSize(11)
         self.plainTextEdit.setFont(font)
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.verticalLayout.addWidget(self.plainTextEdit)
@@ -47,23 +37,43 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton.setMinimumSize(QtCore.QSize(0, 22))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.radioButton.setFont(font)
         self.radioButton.setChecked(True)
         self.radioButton.setObjectName("radioButton")
         self.horizontalLayout.addWidget(self.radioButton)
         self.radioButton_2 = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton_2.setMinimumSize(QtCore.QSize(0, 22))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.radioButton_2.setFont(font)
         self.radioButton_2.setObjectName("radioButton_2")
         self.horizontalLayout.addWidget(self.radioButton_2)
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox.setMinimumSize(QtCore.QSize(0, 22))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.checkBox.setFont(font)
         self.checkBox.setObjectName("checkBox")
         self.horizontalLayout.addWidget(self.checkBox)
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setMinimumSize(QtCore.QSize(82, 32))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
         self.spinBox = QtWidgets.QSpinBox(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.spinBox.setFont(font)
         self.spinBox.setMaximum(10)
         self.spinBox.setProperty("value", 5)
         self.spinBox.setObjectName("spinBox")
@@ -74,10 +84,18 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setEnabled(True)
         self.pushButton.setMinimumSize(QtCore.QSize(0, 34))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout_2.addWidget(self.pushButton)
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setMinimumSize(QtCore.QSize(0, 34))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(10)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout_2.addWidget(self.pushButton_2)
         self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
@@ -119,6 +137,6 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "清除文本"))
         self.menu.setTitle(_translate("MainWindow", "关于"))
         self.actionGithub.setText(_translate("MainWindow", "Github"))
-        self.action_1_0_0.setText(_translate("MainWindow", "版本: 1.0.0"))
+        self.action_1_0_0.setText(_translate("MainWindow", "版本: 1.0.0a"))
         self.action_2.setText(_translate("MainWindow", "鸣谢"))
 

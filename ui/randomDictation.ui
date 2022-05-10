@@ -44,7 +44,7 @@
       <property name="font">
        <font>
         <family>微软雅黑</family>
-        <pointsize>10</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
      </widget>
@@ -60,6 +60,12 @@
             <width>0</width>
             <height>22</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>英音</string>
@@ -77,6 +83,12 @@
             <height>22</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>美音</string>
           </property>
@@ -89,6 +101,12 @@
             <width>0</width>
             <height>22</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>乱序</string>
@@ -103,6 +121,12 @@
             <height>32</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>间隔时间</string>
           </property>
@@ -113,6 +137,12 @@
         </item>
         <item>
          <widget class="QSpinBox" name="spinBox">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="maximum">
            <number>10</number>
           </property>
@@ -136,6 +166,12 @@
             <height>34</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>开始听写</string>
           </property>
@@ -148,6 +184,12 @@
             <width>0</width>
             <height>34</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>清除文本</string>
@@ -191,7 +233,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>版本: 1.0.0</string>
+    <string>版本: 1.0.0a</string>
    </property>
   </action>
   <action name="action_2">
