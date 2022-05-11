@@ -16,4 +16,4 @@ DictateNow! 英语单词听写工具是 fenn 的第一个 Python GUI 编程项�
 
   第一次发布。
 
-  仅有 Windows 版本，且仅在 Windows 11 x64 测试。
+  含 Windows 和 macOS 版本。仅在 Windows 11 x64 测试。
