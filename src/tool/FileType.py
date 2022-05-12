@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   FileType.py
-@Time    :   2022/05/10 22:14:25
+@Time    :   2022/05/12 23:32:11
 @Author  :   Fenn 
-@Version :   
+@Version :   1.0.1a
 @Contact :   realHifenn@outlook.com
 '''
 

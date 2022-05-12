@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>900</width>
     <height>600</height>
    </rect>
   </property>
@@ -18,18 +18,18 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>650</width>
+    <width>900</width>
     <height>250</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>800</width>
-    <height>600</height>
+    <width>900</width>
+    <height>900</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>DictationNow!</string>
+   <string>DictationNow! v1.0.1a</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -151,6 +151,35 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>朗读次数</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBox_2">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>
@@ -207,7 +236,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>900</width>
      <height>32</height>
     </rect>
    </property>
@@ -217,8 +246,9 @@
     </property>
     <addaction name="actionGithub"/>
     <addaction name="separator"/>
-    <addaction name="action_2"/>
-    <addaction name="action_1_0_0"/>
+    <addaction name="actionThanks"/>
+    <addaction name="actionLog"/>
+    <addaction name="actionVersion"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -228,17 +258,22 @@
     <string>Github</string>
    </property>
   </action>
-  <action name="action_1_0_0">
+  <action name="actionVersion">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>版本: 1.0.0a</string>
+    <string>版本: 1.0.1a</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="actionThanks">
    <property name="text">
     <string>鸣谢</string>
+   </property>
+  </action>
+  <action name="actionLog">
+   <property name="text">
+    <string>更新日志</string>
    </property>
   </action>
  </widget>

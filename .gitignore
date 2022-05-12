@@ -1,6 +1,8 @@
 __pycache__/
+.idea/
 build/
 dist/
 venv/
+test/
 
 main.spec
