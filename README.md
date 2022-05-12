@@ -1,6 +1,6 @@
-# DictateNow!
+# DictationNow!
 
-DictateNow! 英语单词听写工具是 fenn 的第一个 Python GUI 编程项目。
+DictationNow! 英语单词听写工具是 fenn 的第一个 Python GUI 编程项目。
 
 您可以通过本工具获取单词网络发音，并乱序播报。
 
