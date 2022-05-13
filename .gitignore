@@ -4,5 +4,6 @@ build/
 dist/
 venv/
 test/
+dictation-tool-1.0.0a/
 
 main.spec

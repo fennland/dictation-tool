@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   media.py
-@Time    :   2022/05/12 23:32:11
+@Time    :   2022/05/13 10:19:00
 @Author  :   Fenn 
-@Version :   1.0.1a
+@Version :   1.0.0b
 @Contact :   realHifenn@outlook.com
 '''
 
@@ -17,7 +17,7 @@ from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import pyqtSignal
 fileList = []
 
-def get(word, pauseTime = 5, accentType = 1, readTimes = 1):
+def get(word, pauseTime = 5, accentType = 1):
     global fileList
     
     Path = path.abspath('.')
@@ -42,9 +42,8 @@ def get(word, pauseTime = 5, accentType = 1, readTimes = 1):
             fileName = Path + '\\' + word + '.mp3'
         except:
             print("[WARNING] Can't rename " + fileName + '!')
-    
-    for i in range(readTimes):
-        play(fileName, pauseTime)
+
+    play(fileName, pauseTime)
         
     fileList.append(fileName)
     return

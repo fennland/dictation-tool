@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   constants.py
-@Time    :   2022/05/13 00:16:20
+@Time    :   2022/05/13 10:19:00
 @Author  :   Fenn 
-@Version :   1.0.1a
+@Version :   1.0.0b
 @Contact :   realHifenn@outlook.com
 '''
 
 # here put the import lib
 
 
-version = '1.0.1a'
-publishedDate = '2022/05/12'
+version = '1.0.0b'
+publishedDate = '2022/05/13'
 
 github = 'https://github.com/F3nn/dictation-tool'
 thanks = """在开发过程中，参考了以下技术分享：\n
@@ -28,7 +28,6 @@ https://blog.csdn.net/qq_40784418/article/details/105398870\n
 感谢所有人对 DictationNow! 的支持！"""
 log =   """优化 架构调整
 修复 播放时界面无响应
-新增 最高 3 次重复播放
 新增 版本日志"""
 
 """
