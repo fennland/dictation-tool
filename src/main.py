@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   main.py
-@Time    :   2022/05/12 23:32:11
+@Time    :   2022/05/13 10:19:00
 @Author  :   Fenn 
-@Version :   1.0.1a
+@Version :   1.0.0b
 @Contact :   realHifenn@outlook.com
 '''
 
@@ -38,13 +38,11 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
     def clickDictate(self):
         vocabulary = self.plainTextEdit.toPlainText()
         pauseTime = self.spinBox.value()
-        readTimes = self.spinBox_2.value()
         
         if len(vocabulary) != 0:
             vocabulary = vocabulary.split("\n")
             self.flushStatus("解析词汇...", '[INFO] Vocabulary List: ' + str(vocabulary))
 
-            self.plainTextEdit.clear()  # 清除内容
             if self.checkBox.isChecked():  # 乱序
                 shuffle(vocabulary)
                 self.flushStatus("乱序排列...", '[INFO] Change the order of the vocabulary List: ' + str(vocabulary))
@@ -54,7 +52,7 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
             else:
                 accentType = '2'
             
-            self.thread = dictationThread(vocabulary, pauseTime, accentType, readTimes)
+            self.thread = dictationThread(vocabulary, pauseTime, accentType)
             self.thread.statusSignal.connect(self.flushStatus)  # 将子线程的状态信号与 flushStatus 连接
             self.thread.start()
 
@@ -97,23 +95,22 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
                 self.pushButton.setEnabled(False)
             return
 
+
 class dictationThread(QThread):
     statusSignal = pyqtSignal(str, str)  # 发送状态信号
     
-    def __init__(self, vocabulary: list, pauseTime: int, accentType: int, readTimes: int):
+    def __init__(self, vocabulary: list, pauseTime: int, accentType: int):
         super (dictationThread, self).__init__()
         self.vocabulary = vocabulary
         self.pauseTime = pauseTime
         self.accentType = accentType
-        self.readTimes = readTimes
         
     def run(self):
         counts = 0
         for word in self.vocabulary:
-            print(word)
             counts += 1
             self.statusSignal.emit("正在朗读 #" + str(counts) +": " + word + "...", '')
-            media.get(word, self.pauseTime, self.accentType, self.readTimes)
+            media.get(word, self.pauseTime, self.accentType)
 
             if word == self.vocabulary[-1]:  # 最后一个
                 self.statusSignal.emit("就绪", '')
