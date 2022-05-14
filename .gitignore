@@ -1,8 +1,14 @@
 __pycache__/
+dictation-tool-1.0.0a/
 .idea/
 build/
 dist/
 venv/
 test/
+voiceTTS/
+
+*.png
+*.wav
+*.mp3
 
 main.spec
