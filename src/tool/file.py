@@ -11,7 +11,6 @@
 import struct
 import tool.constants as constants
 from PyQt5.QtWidgets import QFileDialog
-from PyQt5.QtCore import QThread  # TODO: 线程解决睡眠卡死问题，使得能在2000ms后刷新 statusBar 并改为就绪，使得 pushButton Enabled.
 
 class fileProcess():  # TODO
     def __init__(self, ui):
