@@ -9,7 +9,6 @@
 
 # here put the import lib
 
-
 productName = 'DictationNow!'
 version = '1.1.0a'
 publishedDate = '2022/05/14'
@@ -34,6 +33,7 @@ log =   """优化 架构调整
 新增 单词列表文件管理
 新增 单词列表可视化展示
 修复了一些其他问题"""
+
 
 """
 TODO:

@@ -159,21 +159,19 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
 class dictationThread(QThread):
     statusSignal = pyqtSignal(str, str)  # 发送状态信号
     
-    def __init__(self, vocabulary: list, pauseTime: int, accentType: int, readTimes: int):
+    def __init__(self, vocabulary: list, pauseTime: int, accentType: int):
         super (dictationThread, self).__init__()
         self.vocabulary = vocabulary
         self.pauseTime = pauseTime
         self.accentType = accentType
-        self.readTimes = readTimes
         
         
     def run(self):
         counts = 0
         for word in self.vocabulary:
-            print(word)
             counts += 1
             self.statusSignal.emit("正在朗读 #" + str(counts) +": " + word + "...", '')
-            media.get(word, self.pauseTime, self.accentType, self.readTimes)
+            media.get(word, self.pauseTime, self.accentType)
 
             if word == self.vocabulary[-1]:  # 最后一个
                 self.statusSignal.emit("就绪", '')
