@@ -153,6 +153,8 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
             self.actionFileSave.setEnabled(True)
             self.actionFileSavedAs.setEnabled(True)
         return
+
+
 class dictationThread(QThread):
     statusSignal = pyqtSignal(str, str)  # 发送状态信号
     
@@ -192,7 +194,7 @@ class ExpertThread(QThread):  # TODO
     
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon("media/favicon.ico"))
+    # app.setWindowIcon(QIcon("../media/favicon.ico"))
     MainWindow = MainWindow()
     MainWindow.show()
     sys.exit(app.exec_())

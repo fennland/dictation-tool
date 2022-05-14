@@ -19,6 +19,9 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(900, 250))
         MainWindow.setMaximumSize(QtCore.QSize(1280, 1280))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icon/favicon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -197,3 +200,4 @@ class Ui_MainWindow(object):
         self.actionExpert.setText(_translate("MainWindow", "导出听力音频 (beta)"))
         self.actionExpertAll.setText(_translate("MainWindow", "导出并整合 (beta)"))
 
+import ui.icon_rc

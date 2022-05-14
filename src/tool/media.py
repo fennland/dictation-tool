@@ -16,6 +16,7 @@ from tool.file import getFileType
 from PyQt5.QtWidgets import QMessageBox
 fileList = []
 
+
 def get(word, pauseTime = 5, accentType = 1, readTimes = 1):
     global fileList
     

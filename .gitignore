@@ -10,5 +10,6 @@ voiceTTS/
 *.png
 *.wav
 *.mp3
+*.txt
 
 main.spec
