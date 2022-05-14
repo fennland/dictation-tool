@@ -11,5 +11,4 @@ voiceTTS/
 *.wav
 *.mp3
 *.txt
-
-main.spec
+*.spec

@@ -7,21 +7,21 @@
 @Contact :   realHifenn@outlook.com
 '''
 
+
 # here put the import lib
 import sys
 import atexit
-
-import ui.Ui_randomDictation as Ui_randomDictation
-import tool.media as media
-import tool.constants as constants
-import tool.file as file
-
+from functools import partial
 from os import remove
 from random import shuffle
-from functools import partial
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QListWidgetItem
+
 from PyQt5.QtCore import QThread, pyqtSignal
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QListWidgetItem
+
+import tool.constants as constants
+import tool.file as file
+import tool.media as media
+import ui.Ui_randomDictation as Ui_randomDictation
 
 
 class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
@@ -34,6 +34,7 @@ class MainWindow(QMainWindow, Ui_randomDictation.Ui_MainWindow):
         
         self.pushButton.clicked.connect(self.clickDictate)  # 传参 partial(func, arg1, arg2...)
         self.pushButton_2.clicked.connect(self.plainTextEdit.clear)
+        self.pushButton_2.clicked.connect(self.listWidget.clear)
         
         self.statusbar.showMessage("就绪")
         
@@ -194,7 +195,6 @@ class ExpertThread(QThread):  # TODO
     
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # app.setWindowIcon(QIcon("../media/favicon.ico"))
     MainWindow = MainWindow()
     MainWindow.show()
     sys.exit(app.exec_())
